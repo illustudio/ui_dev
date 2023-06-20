@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page:nth-child(1) {
+  background-color: red;
+}
+.page:nth-child(2) {
+  background-color: purple;
+}
+.page:nth-child(3) {
+  background-color: peru;
+}
+.page:nth-child(4) {
+  background-color: palegoldenrod;
+}
+
+nav {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  background-color: white;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  border-radius: 3rem;
+}
+.icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+}
+.icon svg {
+  width: 36px;
+  height: 36px;
+}
