@@ -1,0 +1,63 @@
+#accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.accordion-item {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.accordion-item.active {
+  border: 1px solid red;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.25);
+}
+.accordion-item .button {
+  display: flex;
+  width: 100%;
+  border: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+.accordion-item .button.active {
+  background-color: red;
+}
+.accordion-item .panel {
+  height: 0px;
+  display: none;
+}
+
+.accordion-item.active .panel {
+  display: flex;
+  padding: 0.5rem 1rem;
+  height: auto;
+}
+#title span {
+  display: inline-flex;
+  min-width: 10px;
+  min-height: auto;
+  transform: skewY(130deg);
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: relative;
+}
+#title span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-content);
+  color: rgb(0, 4, 233);
+  transform: skewY(30deg) translateY(30px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+#title span.active {
+  transform: skewY(0deg);
+  opacity: 1;
+  color: transparent;
+}
+#title span.active::after {
+  transform: skewY(0deg) translateY(0px);
+  opacity: 1;
+}
